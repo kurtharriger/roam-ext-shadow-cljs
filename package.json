@@ -1,0 +1,26 @@
+{
+  "name": "starter-shadowcljs-reagent",
+  "version": "0.0.1",
+  "description": "Starter template for reagent/shadow-cljs projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezmiller/starter-shadowcljs-reagent"
+  },
+  "author": {
+    "name": "Ethan Miller",
+    "email": "ethanzanemiller@gmail.com"
+  },
+  "scripts": {
+    "dev": "shadow-cljs watch app",
+    "release": "shadow-cljs release app",
+    "clean": "rm -rf target && rm -rf public/js"
+  },
+  "dependencies": {
+    "create-react-class": "^16.6.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.7.9"
+  }
+}

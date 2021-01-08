@@ -5,3 +5,4 @@
 .nrepl-port
 yarn.lock
 package-lock.json
+.idea/

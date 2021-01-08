@@ -3,9 +3,8 @@
  ["src"]
 
  :dependencies
- [[binaryage/devtools "0.9.10"]
-  [cider/cider-nrepl "0.18.0"]
-  [reagent "0.8.1"]]
+ [[reagent "1.0.0"]
+  [reagent-utils "0.3.3"]]
 
  :builds
  {:app

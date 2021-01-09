@@ -50,4 +50,12 @@ Install in roam paste the following into `{{[[roam/js]]}}` block
 })()
 ```
 
+Note:
+
+The browser will not permit unsecure ws connection from a site served over https and shadow-cljs will fail eval script
+that connect to websocket and thus the project must run on https.  I've added self-signed certificate, but the browser
+will block this as untrusted unless you add the certificate or navigate to https://localhost:3000/ first and accept
+the risk and continue. Once this is done shadow-cljs and hot reloading work as expected... 
+
+Another possible alternative to is to use a proxy for development instead of https.  
 

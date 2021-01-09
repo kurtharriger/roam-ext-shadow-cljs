@@ -13,16 +13,17 @@
     "dev": "shadow-cljs watch app",
     "release": "shadow-cljs release app",
     "clean": "rm -rf target && rm -rf public/js",
-    "prepublish":"npm run release"
+    "prepublishOnly": "npm run release"
   },
   "dependencies": {
+    "create-react-class": "15.6.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
   "devDependencies": {
     "shadow-cljs": "^2.11.11"
   },
-  "files":[
+  "files": [
     "public/js/main.js"
   ]
 }

@@ -43,9 +43,11 @@ Install in roam paste the following into `{{[[roam/js]]}}` block
     document.getElementsByTagName("head")[0].appendChild(extension);
   };
   installScript('https://localhost:3739/js/main.js', (err) => {
-    console.log('dev build not found');
+    console.log('dev server not running, loading release build');
     // load release
-    // installScript(...)
+    installScript('https://cdn.jsdelivr.net/npm/@kurtharriger/roam-ext-shadow-cljs/public/js/main.js')
   })
 })()
 ```
+
+

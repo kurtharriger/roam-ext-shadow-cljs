@@ -1,11 +1,19 @@
 {
-  "name": "starter-shadowcljs-reagent",
-  "version": "0.0.1",
+  "name": "@kurtharriger/roam-ext-shadow-cljs",
+  "author": {
+    "name": "Kurt Harriger",
+    "email": "kurtharriger@gmail.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.2",
   "description": "Starter template for reagent/shadow-cljs projects",
   "scripts": {
     "dev": "shadow-cljs watch app",
     "release": "shadow-cljs release app",
-    "clean": "rm -rf target && rm -rf public/js"
+    "clean": "rm -rf target && rm -rf public/js",
+    "prepublish":"npm run release"
   },
   "dependencies": {
     "react": "17.0.1",
@@ -13,5 +21,8 @@
   },
   "devDependencies": {
     "shadow-cljs": "^2.11.11"
-  }
+  },
+  "files":[
+    "public/js/main.js"
+  ]
 }

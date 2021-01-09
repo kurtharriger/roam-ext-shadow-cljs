@@ -1,20 +1,24 @@
 ;; shadow-cljs configuration
 {:source-paths
- ["src"]
+      ["src"]
 
  :dependencies
- [[reagent "1.0.0"]
-  [reagent-utils "0.3.3"]]
+      [[reagent "1.0.0"]
+       [reagent-utils "0.3.3"]]
 
+ :ssl {
+       :keystore "ssl/keystore"
+       :password "roam-ext-shadow-cljs"
+       }
  :builds
- {:app
-  {:target     :browser
-   :output-dir "public/js"
-   :asset-path "js"
+      {:app
+       {:target          :browser
+        :output-dir      "public/js"
+        :asset-path      "js"
 
-   :modules
-   {:main {:entries [app.core]}}
+        :modules
+                         {:main {:entries [app.start]}}
 
-   :devtools
-   {:http-root   "public"
-    :http-port   3739}}}}
+        :devtools        {:http-root "public"
+                          :devtools-url "https://localhost:9630"
+                          :http-port 3739}}}}

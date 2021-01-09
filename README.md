@@ -26,3 +26,5 @@ This package includes
 - [reagent](https://github.com/reagent-project/reagent) - A ClojureScript interface to React.
 - [cider-nrepl](https://github.com/clojure-emacs/cider-nrepl) - nRepl middleware that works with Calva for interactive inline development.
 - [Skeleton](http://getskeleton.com/) - Super simple CSS starter styles.
+
+CLOSURE_DEFINES = { ...window.CLOSURE_DEFINES, ['shadow.cljs.devtools.client.env.devtools_url']:  'https://localhost:9630' };

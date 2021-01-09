@@ -5,10 +5,18 @@
 
 
 (defn ^:dev/after-load start []
-  (js/console.log "Starting...")
-  (rdom/render [app]
-            (.getElementById js/document "root")))
+      (js/console.log "Starting...")
+      (rdom/render [app]
+                   (.querySelector js/document "[data-link-title='cljs-root']")
+                   #_(.getElementById js/document "root"))
+      )
 
+(defn ^:export observe []
+      (let [callback (fn [mutations] (prn mutations))
+            observer (js/MutationObserver. callback)]
+           (.observe observer
+                     (.-body js/document)
+                     #js {:childList true :subtree true})))
 
 (defn ^:export main []
-  (start))
+    (start))

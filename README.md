@@ -24,7 +24,28 @@ This package includes
 
 - [shadow-cljs](https://github.com/thheller/shadow-cljs) - ClojureScript compilation tool.
 - [reagent](https://github.com/reagent-project/reagent) - A ClojureScript interface to React.
-- [cider-nrepl](https://github.com/clojure-emacs/cider-nrepl) - nRepl middleware that works with Calva for interactive inline development.
 - [Skeleton](http://getskeleton.com/) - Super simple CSS starter styles.
 
-CLOSURE_DEFINES = { ...window.CLOSURE_DEFINES, ['shadow.cljs.devtools.client.env.devtools_url']:  'https://localhost:9630' };
+
+Install in roam paste the following into `{{[[roam/js]]}}` block
+
+```javascript       
+(() => {
+  const installScript = (src, onError) => {
+    var existing = document.getElementById(name);
+    if (existing) { existing.remove(); }
+    var extension = document.createElement("script");
+    extension.type = "text/javascript";
+    extension.src = src; 
+    extension.async = true;
+    extension.id = name;
+    extension.onerror = onError;
+    document.getElementsByTagName("head")[0].appendChild(extension);
+  };
+  installScript('https://localhost:3739/js/main.js', (err) => {
+    console.log('dev build not found');
+    // load release
+    // installScript(...)
+  })
+})()
+```
